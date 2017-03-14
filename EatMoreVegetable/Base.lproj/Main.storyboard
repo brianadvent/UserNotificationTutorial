@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EatMoreVegetable" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eat more Fruit and Vegetable" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09c-FH-uEz">
+                                <rect key="frame" x="16" y="28" width="174" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwh-UH-Oul">
+                                <rect key="frame" x="16" y="119" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="0PQ-KH-Z3G"/>
+                                    <constraint firstAttribute="width" constant="100" id="wEf-bE-1Zm"/>
+                                </constraints>
+                                <state key="normal" image="Apple"/>
+                                <connections>
+                                    <action selector="addFoodToDatabase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QLh-gL-iKP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jch-nV-hHY">
+                                <rect key="frame" x="259" y="119" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="e8q-u4-224"/>
+                                    <constraint firstAttribute="width" constant="100" id="jwl-Ik-wtq"/>
+                                </constraints>
+                                <state key="normal" image="Salad"/>
+                                <connections>
+                                    <action selector="addFoodToDatabase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uwu-Ek-d34"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Fruit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jg-qM-BUr">
+                                <rect key="frame" x="31" y="227" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Vegetable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQU-J5-eV3">
+                                <rect key="frame" x="253" y="227" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1er-qe-BOA">
+                                <rect key="frame" x="-1" y="339" width="376" height="328"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="328" id="g58-E0-0iK"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="V28-KJ-bXP" detailTextLabel="WZs-yX-UR1" style="IBUITableViewCellStyleSubtitle" id="Xjh-Yp-RbR">
+                                        <rect key="frame" x="0.0" y="28" width="376" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xjh-Yp-RbR" id="sHY-RI-hqY">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V28-KJ-bXP">
+                                                    <rect key="frame" x="15" y="4" width="34" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WZs-yX-UR1">
+                                                    <rect key="frame" x="15" y="25" width="44" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEE-aa-E8m">
+                                <rect key="frame" x="16" y="298" width="145" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A22-de-EbB">
+                                <rect key="frame" x="277" y="42" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Remind me">
+                                    <color key="titleColor" red="0.32834994792938232" green="0.54607170820236206" blue="0.32865285873413086" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startReminding:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LX9-dd-wux"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cQU-J5-eV3" firstAttribute="top" secondItem="Jch-nV-hHY" secondAttribute="bottom" constant="8" id="2Wz-JW-aZV"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="CEE-aa-E8m" secondAttribute="leading" id="3LW-hO-7gu"/>
+                            <constraint firstItem="Jch-nV-hHY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="99" id="FeE-Ha-BJf"/>
+                            <constraint firstItem="0jg-qM-BUr" firstAttribute="top" secondItem="kwh-UH-Oul" secondAttribute="bottom" constant="8" id="IGJ-hh-8hn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CEE-aa-E8m" secondAttribute="trailing" constant="198" id="IbK-zp-B2Y"/>
+                            <constraint firstItem="0jg-qM-BUr" firstAttribute="centerX" secondItem="kwh-UH-Oul" secondAttribute="centerX" id="M2I-Gy-Ybd"/>
+                            <constraint firstItem="kwh-UH-Oul" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="99" id="Wem-a6-uxS"/>
+                            <constraint firstItem="1er-qe-BOA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-17" id="kNP-uU-es1"/>
+                            <constraint firstItem="1er-qe-BOA" firstAttribute="top" secondItem="CEE-aa-E8m" secondAttribute="bottom" constant="12" id="nSy-g3-MHb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1er-qe-BOA" secondAttribute="trailing" constant="-16" id="nfW-Bz-ktR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jch-nV-hHY" secondAttribute="trailing" id="paA-0w-WaF"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kwh-UH-Oul" secondAttribute="leading" id="peg-tP-r4c"/>
+                            <constraint firstItem="cQU-J5-eV3" firstAttribute="centerX" secondItem="Jch-nV-hHY" secondAttribute="centerX" id="uHw-R8-SBR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1er-qe-BOA" secondAttribute="bottom" id="zJL-7q-reS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="1er-qe-BOA" id="cNV-1a-2cu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Apple" width="128" height="128"/>
+        <image name="Salad" width="128" height="128"/>
+    </resources>
+</document>
